@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prince Sharma Computers</title>
+
+    <meta name="description"
+          content="Prince Sharma Computers - Buy laptops, desktop computers, gaming PCs and computer accessories.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        <span>PRINCE</span> SHARMA
+        <small>COMPUTERS</small>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-right">
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            💻 PREMIUM COMPUTER STORE
+        </div>
+
+        <h1>
+            Upgrade Your
+            <span>Digital World</span>
+        </h1>
+
+        <p>
+            Buy powerful laptops, desktop computers, gaming PCs
+            and computer accessories at competitive prices.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products" class="primary-btn">
+                Shop Now →
+            </a>
+
+            <a href="#contact" class="secondary-btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Quick and convenient delivery.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>Best Prices</h3>
+        <p>Competitive prices on products.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Quality Products</h3>
+        <p>Reliable technology products.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3>Technical Support</h3>
+        <p>Support when you need it.</p>
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+
+        <span>OUR PRODUCTS</span>
+
+        <h2>Find Your Perfect Computer</h2>
+
+        <p>
+            Explore our collection of laptops, desktops,
+            gaming PCs and accessories.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search products..."
+            onkeyup="searchProducts()"
+        >
+
+        <select id="categoryFilter" onchange="filterCategory()">
+
+            <option value="all">All Categories</option>
+            <option value="laptop">Laptops</option>
+            <option value="desktop">Desktop</option>
+            <option value="gaming">Gaming</option>
+            <option value="accessory">Accessories</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="products-grid" id="productsGrid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <article
+            class="product-card"
+            data-category="laptop"
+            data-name="premium business laptop"
+        >
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80"
+                    alt="Premium Laptop"
+                >
+
+                <span class="product-tag">POPULAR</span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="category">LAPTOP</span>
+
+                <h3>Premium Business Laptop</h3>
+
+                <p>
+                    Fast and reliable laptop for business,
+                    study and everyday work.
+                </p>
+
+                <div class="specs">
+                    <span>⚡ Fast</span>
+                    <span>💾 SSD</span>
+                    <span>🖥️ Full HD</span>
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹45,999
+                    </div>
+
+                    <button
+                        onclick="addToCart('Premium Business Laptop',45999)"
+                        class="add-btn"
+                    >
+                        + Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+
+        <article
+            class="product-card"
+            data-category="gaming"
+            data-name="gaming computer pc"
+        >
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=80"
+                    alt="Gaming PC"
+                >
+
+                <span class="product-tag gaming-tag">
+                    GAMING
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="category">GAMING PC</span>
+
+                <h3>Gaming Computer PC</h3>
+
+                <p>
+                    Powerful desktop computer for gaming,
+                    editing and high-performance tasks.
+                </p>
+
+                <div class="specs">
+                    <span>🎮 Gaming</span>
+                    <span>⚡ Powerful</span>
+                    <span>❄️ Cooling</span>
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹69,999
+                    </div>
+
+                    <button
+                        onclick="addToCart('Gaming Computer PC',69999)"
+                        class="add-btn"
+                    >
+                        + Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+
+        <article
+            class="product-card"
+            data-category="desktop"
+            data-name="office desktop computer"
+        >
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=900&q=80"
+                    alt="Office Desktop"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="category">DESKTOP</span>
+
+                <h3>Office Desktop Computer</h3>
+
+                <p>
+                    Reliable computer for office work,
+                    education and business.
+                </p>
+
+                <div class="specs">
+                    <span>💼 Office</span>
+                    <span>⚡ Fast</span>
+                    <span>💾 SSD</span>
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹32,999
+                    </div>
+
+                    <button
+                        onclick="addToCart('Office Desktop Computer',32999)"
+                        class="add-btn"
+                    >
+                        + Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 4 -->
+
+        <article
+            class="product-card"
+            data-category="laptop"
+            data-name="student laptop"
+        >
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=80"
+                    alt="Student Laptop"
+                >
+
+                <span class="product-tag">NEW</span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="category">LAPTOP</span>
+
+                <h3>Student Laptop</h3>
+
+                <p>
+                    Lightweight laptop for students,
+                    online classes and daily use.
+                </p>
+
+                <div class="specs">
+                    <span>🎓 Study</span>
+                    <span>🔋 Battery</span>
+                    <span>💻 HD</span>
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹38,999
+                    </div>
+
+                    <button
+                        onclick="addToCart('Student Laptop',38999)"
+                        class="add-btn"
+                    >
+                        + Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 5 -->
+
+        <article
+            class="product-card"
+            data-category="accessory"
+            data-name="computer monitor"
+        >
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=80"
+                    alt="Computer Monitor"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="category">ACCESSORY</span>
+
+                <h3>Full HD Monitor</h3>
+
+                <p>
+                    High-quality display for gaming,
+                    office work and entertainment.
+                </p>
+
+                <div class="specs">
+                    <span>🖥️ Full HD</span>
+                    <span>👁️ Clear</span>
+                    <span>⚡ Fast</span>
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹12,999
+                    </div>
+
+                    <button
+                        onclick="addToCart('Full HD Monitor',12999)"
+                        class="add-btn"
+                    >
+                        + Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 6 -->
+
+        <article
+            class="product-card"
+            data-category="accessory"
+            data-name="gaming keyboard"
+        >
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80"
+                    alt="Gaming Keyboard"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="category">ACCESSORY</span>
+
+                <h3>Gaming Keyboard</h3>
+
+                <p>
+                    Responsive keyboard designed for gaming
+                    and everyday computer use.
+                </p>
+
+                <div class="specs">
+                    <span>🎮 Gaming</span>
+                    <span>⌨️ RGB</span>
+                    <span>⚡ Fast</span>
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹2,499
+                    </div>
+
+                    <button
+                        onclick="addToCart('Gaming Keyboard',2499)"
+                        class="add-btn"
+                    >
+                        + Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <div class="section-heading light">
+
+        <span>OUR SERVICES</span>
+
+        <h2>More Than Just Computers</h2>
+
+        <p>
+            Professional computer-related services from
+            Prince Sharma.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div>💻</div>
+            <h3>Computer Sales</h3>
+            <p>Desktop and laptop computers.</p>
+        </div>
+
+        <div class="service-card">
+            <div>🎮</div>
+            <h3>Gaming PCs</h3>
+            <p>Powerful gaming computer setups.</p>
+        </div>
+
+        <div class="service-card">
+            <div>🔧</div>
+            <h3>Computer Support</h3>
+            <p>Technical assistance and support.</p>
+        </div>
+
+        <div class="service-card">
+            <div>🖥️</div>
+            <h3>Accessories</h3>
+            <p>Monitors, keyboards and more.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=1000&q=80"
+            alt="Prince Sharma Computers"
+        >
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span>ABOUT US</span>
+
+        <h2>
+            Welcome to
+            <strong>Prince Sharma Computers</strong>
+        </h2>
+
+        <p>
+            We provide computers, laptops, gaming PCs and
+            accessories for students, professionals, gamers
+            and businesses.
+        </p>
+
+        <p>
+            Our goal is to provide quality technology,
+            competitive pricing and helpful customer service.
+        </p>
+
+        <div class="owner-box">
+
+            <div class="owner-icon">👑</div>
+
+            <div>
+                <small>WEBSITE OWNER</small>
+                <h3>Prince Sharma</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-heading">
+
+        <span>GET IN TOUCH</span>
+
+        <h2>Contact Prince Sharma</h2>
+
+        <p>
+            Have a question about a product? Contact us.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <div>📱</div>
+
+            <h3>WhatsApp</h3>
+
+            <p>Chat with us about products and orders.</p>
+
+            <a
+                href="https://wa.me/91XXXXXXXXXX"
+                target="_blank"
+            >
+                WhatsApp Us →
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div>📍</div>
+
+            <h3>Location</h3>
+
+            <p>Kishangarh, Rajasthan, India</p>
+
+            <a href="#contact">
+                Our Location
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div>👑</div>
+
+            <h3>Owner</h3>
+
+            <p>Prince Sharma</p>
+
+            <a href="#about">
+                About Owner
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div>
+
+            <div class="footer-logo">
+                PRINCE <span>SHARMA</span>
+            </div>
+
+            <p>
+                Your trusted destination for computers,
+                laptops and accessories.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📱 91XXXXXXXXXX</p>
+            <p>📍 Kishangarh, Rajasthan</p>
+            <p>👑 Prince Sharma</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Prince Sharma Computers.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart-modal">
+
+        <button class="close-cart" onclick="closeCart()">
+            ×
+        </button>
+
+        <h2>🛒 Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <button class="checkout-btn" onclick="checkoutWhatsApp()">
+            Order on WhatsApp →
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
